@@ -10,10 +10,13 @@ fun main() {
 
     val persona2 = Persona("Diego","Yturriaga",20)
     persona2.darBienvenida()
+
+    val persona3 = Persona()
+    persona3.darBienvenida()
 }
 
 
-class Persona(var nombre:String, var apellido: String,var edad:Int){
+class Persona(private val nombre:String = "",private val apellido: String = "",private val edad:Int = 0){
     fun darBienvenida(){
         println("hola $nombre $apellido\n" +
             "tu tienes $edad años")
